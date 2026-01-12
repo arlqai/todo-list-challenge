@@ -1,7 +1,7 @@
-import { Checkbox, Text, ActionIcon, Group } from '@mantine/core';
-import { IconTrash } from '@tabler/icons-react';
-import { useUpdateTodo, useDeleteTodo } from '#/api/todos';
-import type { Todo } from '#/server/db';
+import { Checkbox, Text, ActionIcon, Group } from "@mantine/core";
+import { IconTrash } from "@tabler/icons-react";
+import { useUpdateTodo, useDeleteTodo } from "#/api/todos";
+import type { Todo } from "#/server/todos/db";
 
 interface TodoItemProps {
   todo: Todo;
@@ -32,7 +32,7 @@ export function TodoItem({ todo }: TodoItemProps) {
         />
         <Text
           style={{
-            textDecoration: todo.completed ? 'line-through' : 'none',
+            textDecoration: todo.completed ? "line-through" : "none",
             opacity: todo.completed ? 0.6 : 1,
           }}
         >
