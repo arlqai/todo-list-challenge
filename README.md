@@ -118,3 +118,11 @@ type Todo = {
   createdAt: Date;
 };
 ```
+
+## Your Assignment: Add Tags Feature
+
+Your task is to extend this application by adding a **Tags** feature. Users should be able to create tags (eg: chore, admistrative, ...) and assign them to todos.
+
+Bonus: if time permits you can implement filtering on the tags.
+
+Feel free to use coding assistants (Claude Code, Copilot...) or not depending on which workflow you are most comfortable with. You should be ready to explain and show your understanding of the generated code however.
