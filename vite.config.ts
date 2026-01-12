@@ -1,21 +1,21 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import devServer from '@hono/vite-dev-server';
-import build from '@hono/vite-build/node';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import devServer from "@hono/vite-dev-server";
+import build from "@hono/vite-build/node";
 
 export default defineConfig(({ mode }) => {
-  if (mode === 'client') {
+  if (mode === "client") {
     return {
       plugins: [react()],
       build: {
-        outDir: 'dist/client',
+        outDir: "dist/client",
         rollupOptions: {
-          input: '/index.html',
+          input: "/index.html",
         },
       },
       resolve: {
         alias: {
-          '#': '/src',
+          "#": "/src",
         },
       },
     };
@@ -24,17 +24,16 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       devServer({
-        entry: 'src/server/index.ts',
+        entry: "src/server/index.tsx",
       }),
-      react(),
       build({
-        entry: 'src/server/index.ts',
-        outputDir: 'dist',
+        entry: "src/server/index.tsx",
+        outputDir: "dist",
       }),
     ],
     resolve: {
       alias: {
-        '#': '/src',
+        "#": "/src",
       },
     },
   };
